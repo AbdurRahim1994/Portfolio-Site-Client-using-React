@@ -1,0 +1,1 @@
+export const BaseURL = 'https://teal-filthy-binturong.cyclic.app/api/v1'

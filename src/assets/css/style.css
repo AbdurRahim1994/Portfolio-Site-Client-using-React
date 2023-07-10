@@ -1,0 +1,246 @@
+.center-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    text-align: center;
+}
+
+.LoadingOverlay {
+    position: absolute;
+    display: block;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+    z-index: 500000 !important;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.Line-Progress .interminate {
+    background-color: var(--bs-dark)
+}
+
+.Line-Progress .interminate:before {
+    z-index: -100 !important;
+    height: 3px;
+    content: "";
+    position: fixed;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: interminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+    animation: interminate 2.1s cubic-bezier(0.65, 0.815, 0.735, 0.395) infinite;
+}
+
+.Line-Progress .interminate:after {
+    z-index: -100 !important;
+    height: 3px;
+    content: "";
+    position: fixed;
+    background-color: inherit;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    will-change: left, right;
+    -webkit-animation: interminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    animation: interminate-short 2.1s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -webkit-animation-delay: 1.15s;
+    animation-delay: 1.15s;
+}
+
+@-webkit-keyframes interminate {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@keyframes interminate {
+    0% {
+        left: -35%;
+        right: 100%;
+    }
+
+    60% {
+        left: 100%;
+        right: -90%;
+    }
+
+    100% {
+        left: 100%;
+        right: -90%;
+    }
+}
+
+@-webkit-keyframes interminate-short {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+
+    100% {
+        left: 107%;
+        right: -8%;
+    }
+}
+
+@keyframes interminate-short {
+    0% {
+        left: -200%;
+        right: 100%;
+    }
+
+    60% {
+        left: 107%;
+        right: -8%;
+    }
+
+    100% {
+        left: 107%;
+        right: -8%;
+    }
+}
+
+:root {
+    --bg-color: #28223f;
+    --secondary-color: #fa5b0f;
+    --nav-color: #111;
+    --text-color: #fff;
+}
+
+.link-font {
+    font-weight: 700;
+    font-size: 25px;
+}
+
+body {
+    background-color: var(--bg-color)
+}
+
+.nav {
+    background-color: var(--nav-color);
+}
+
+.logo-span {
+    color: var(--secondary-color);
+}
+
+.intro h1 {
+    color: var(--text-color);
+    margin: 80px 0 0 80px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+}
+
+.intro h3 {
+    color: var(--text-color);
+    font-size: 40px;
+    margin: 10px 0 0 80px;
+    font-weight: 500;
+}
+
+.intro p {
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 500;
+    margin: 10px 0 30px 80px;
+}
+
+.intro h3 span {
+    color: var(--secondary-color);
+    letter-spacing: 2px;
+    font-family: cursive;
+    font-weight: 700;
+}
+
+.intro a {
+    font-size: 20px;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 8px 20px;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0 0 80px;
+    text-decoration: none;
+}
+
+.intro ul {
+    display: flex;
+    align-items: center;
+    margin: 10px 0 0 40px;
+}
+
+.intro ul li {
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #111;
+    border-radius: 2px;
+    margin: 10px;
+    padding: 15px 15px;
+    font-size: 15px;
+}
+
+.intro ul li span {
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.image img {
+    margin: 80px 0 0 0;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+}
+
+.nav-link::after {
+    transition: .3s linear;
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.nav-link {
+    position: relative;
+}
+
+.contact h1{
+    color: var(--secondary-color);
+    margin: 40px 0 0 0;
+    text-align: center;
+    font-family: 'Poppins' sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    font-style: italic;
+}
